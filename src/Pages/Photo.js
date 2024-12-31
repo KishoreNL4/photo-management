@@ -12,8 +12,8 @@ function Photo() {
       const reader = new FileReader();
       reader.onload = () => {
         setUploadedImages((prev) => [...prev, reader.result]);
-        setShowModal(false); // Close the modal after saving
-        setSelectedFile(null); // Clear the selected file
+        setShowModal(false);
+        setSelectedFile(null);
       };
       reader.readAsDataURL(selectedFile);
     }
@@ -67,7 +67,7 @@ function Photo() {
           ) : (
             <div className="grid grid-cols-3 gap-4">
               {uploadedImages.map((image, index) => (
-                <div key={index} className="relative">
+                <div key={index} className="relative ">
                   <img
                     src={image}
                     alt={`Uploaded ${index + 1}`}

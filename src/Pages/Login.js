@@ -12,7 +12,6 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
     if (username === "testuser" && password === "password123") {
-      // Set token in localStorage when login is successful
       localStorage.setItem("token", "loggedin");
       localStorage.setItem("username", username);
 
